@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>SOS Online</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="joinScreen">
+    <h2>Masuk Game SOS</h2>
+    <input id="nameInput" placeholder="Nama">
+    <input id="roomInput" placeholder="Room ID">
+    <input id="sizeInput" type="number" value="5" min="3" max="10">
+    <button id="joinBtn">Gabung</button>
+  </div>
+
+  <div id="gameScreen" style="display:none;">
+    <div id="leftPanel">
+      <h3 id="roomInfo"></h3>
+      <div id="board"></div>
+    </div>
+
+    <div id="rightPanel">
+      <h4>Pemain</h4>
+      <div id="players"></div>
+
+      <h4>Skor</h4>
+      <div id="scores"></div>
+
+      <h4>SOS Terdeteksi</h4>
+      <div id="sosList"></div>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>
